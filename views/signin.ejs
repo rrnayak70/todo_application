@@ -1,0 +1,55 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<!-- <div class="card w-25 p-4 m-auto  text-center ">
+<h1 class="card-title text-center">Sign In</h1>
+
+<form class="card-body " action="/signin" method="post">
+
+<input class="w-100 m-1"type="username" name="username" placeholder="username">
+<input class="w-100 m-1"type="password" name="password" placeholder="password">
+
+<h5 class="p-2 "> <a href="/get-email" class="text-decoration-none ">forget password ?</a></h5>
+<button class="btn btn-primary">Sign In</button>
+
+<h6>Don't have an account? <a href="/signup">Signup</a></h6>
+
+</form>
+</div> -->
+
+<div>
+<div class="container flex">
+<form class="box" action="/signin" method="post" >
+<h4 class="fs-1">Sign in</h4>
+<input type="text" name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Passsword" id="typepass">
+
+<input  type="checkbox" onclick="Toggle()">
+    <strong>Show Password</strong>
+
+<a href="/get-email" class="forgetpass">Forget Password?</a>
+<button class="btn1">Sign In</button>
+</form>
+<a href="/signup" class="dnthave">Don’t have an account? Sign up</a>
+</div> 
+       
+</div>
+
+
+
+<script>
+    // Change the type of input to password or text
+    function Toggle() {
+        let temp = document.getElementById("typepass");
+         if (temp.type === "password") {
+            temp.type = "text";
+        }
+        else {
+            temp.type = "password";
+        }
+    }
+</script>
+
+
+ 
+
+<%-include("partials/footer")%>

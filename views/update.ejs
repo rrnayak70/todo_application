@@ -1,0 +1,19 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class=" container">
+    
+<form class="box " action="/updateUser/<%=user._id%>" method="post">
+    <h4 class="fs-1">Update User</h4>
+<input type="text" name="username" value="<%=user.username%>" placeholder="username">
+<input type="email" name="email" value="<%=user.email%>" placeholder="Email">
+<input type="password" name="password" value="<%=user.password%>" placeholder="password">
+
+
+<button class="btn1">Update user</button>
+
+<!-- <h6>Already have an account? <a href="/signin">Login here</a></h6> -->
+
+</form>
+</div>
+
+<%-include("partials/footer")%>

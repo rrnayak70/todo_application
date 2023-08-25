@@ -1,0 +1,21 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="container ">
+
+    
+<form class="box" action="/reset/<%=id%>" method="post">
+
+    <h4 class="fs-1">reset password</h4>
+
+<input type="password" name="oldpassword" placeholder="old password">
+<input type="password" name="password" placeholder="password">
+
+
+<button class="btn btn-primary my-2 btn1"> reset password</button>
+
+
+
+</form>
+</div>
+
+<%-include("partials/footer")%>

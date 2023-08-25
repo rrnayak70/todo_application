@@ -1,0 +1,22 @@
+<%- include('partials/header')%>
+<!--  -->
+<%- include('partials/nav')%>
+<form class="m-auto w-25 mt-5 container3 p-3 text-light" action="/updatetodo/<%=todo._id%>" method="post">
+    <h1 class="mb-4 text-light fs-1 m-4">Update Todo</h1>
+    <input
+    class="form-control my-4 m-auto"
+        type="text"
+        placeholder="title"
+        name="title"
+        value="<%=todo.title%>"
+    />
+    <textarea
+        name="description"
+        placeholder="enter text here..."
+        class="form-control"
+    ><%=todo.description%></textarea>
+    <button class="m-3 btn btn-primary w-25">Update</button>
+    <p class="text-light  ">Want to go to homepage ? <a href="/home">Home</a></p>
+</form>
+
+<%- include('partials/footer')%>

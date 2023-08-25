@@ -1,0 +1,24 @@
+<nav class="navbar border-bottom mb-5" >
+    <h1 class="text-light p-2 mx-5">LOGO</h1>
+    <ul class="d-flex gap-3 m-3 list-unstyled luc">
+        <li class="">
+        <a class="text-decoration-none fs-4 text-light"
+        href="<%=user ? '/home': '/'%>">Home</a></li>
+
+        <%if (!user){%>
+        <li ><a class="text-decoration-none fs-4 text-light" href="/signin">Signin</a></li>
+        <li><a class="text-decoration-none fs-4 text-light" href="/signup">Signup</a></li>
+        <%}else{%>
+            <!-- <li>
+                <a class="text-decoration-none fs-4 text-light" href="/reset/<%= user._id%>"
+                    >Reset</a
+                >
+            </li> -->
+
+            <li><a class="text-decoration-none fs-4 text-light" href="/profile">Profile</a></li>
+            
+
+        <li><a class="text-decoration-none fs-4 text-light" href="/signout">Signout</a></li>
+        <%}%>
+    </ul>
+</nav>
